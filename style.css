@@ -7,11 +7,12 @@ body {
 }
 
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
     background-color: #ced4de;
     height: 100px;
     width: 100%;
+    z-index: 9999;
 }
 
 .headerNavigation {
@@ -23,17 +24,22 @@ header {
 
 .sideNavigation {
     position: sticky;
+    display: inline-block;
+    vertical-align: top;
     max-width: 350px;
-    margin-top: 0;
+    
     top: 170px;
     margin-left: 75%;
     transform: translateY(25%);
+    animation: slideInFromRight .8s forwards;
 }
 
 .BlogSection {
     pointer-events: none;
+    
     margin-top: -14%;
     left: 12%;
+    animation: slideInFromBottom 1s forwards;
 }
 
 .sideNavigation:before {
@@ -42,9 +48,10 @@ header {
     top: -7px;
     bottom: 0;
     left: -20px;
-    width: 5px;
+    width: 2px;
     height: 350px;
     background-color: #ced4de;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
 }
 
 h1 {
@@ -57,9 +64,55 @@ a {
 }
 
 .Logo {
+    display: inline-block;
     position: relative;
     left: 65px;
     top: 13px;
+    transition: all 150ms ease-in-out;
+}
+
+.Logo:hover {
+    
+    transform: scale(1.03);
+    filter: grayscale(100%);
+    
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInFromRight {
+    0% {
+      opacity: 0;
+      transform: translateX(+100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.HomeTitleText, .HomeText {
+    opacity: 0;
 }
 
 .HomeTitleText {
@@ -67,7 +120,15 @@ a {
     top: 40%;
     left: 250px;
     transform: translateY(-50%);
+    animation: slideInFromLeft 1s forwards;
+    
 }
+
+.HomeTitleText:hover h1{
+    font-size: 64px;
+    
+}
+
 
 .HomeText {
     position: absolute;
@@ -75,12 +136,16 @@ a {
     left: 750px;
     margin-right: 10%;
     transform: translateY(-50%);
+    animation: slideInFromBottom 1.5s forwards;
+    
 }
+
 
 .BlogTitle {
     position: relative;
     margin-top: 175px;
     left: 12%;
+    animation: slideInFromLeft 1s forwards;
 }
 
 .EssayText {
@@ -95,6 +160,7 @@ a {
     max-width: 400px;
     top: 25%;
     left: 10%;
+    animation: slideInFromBottom 1s forwards;
 }
 
 .ProfileDescription {
@@ -103,6 +169,7 @@ a {
     max-width: auto;
     margin-right: 200px;
     left: 43%;
+    animation: slideInFromRight 1s forwards;
 }
 
 .Portfolio {
@@ -126,15 +193,23 @@ a {
 .document {
     position: relative;
     pointer-events: none;
-    margin-top: -190px;
+   /* margin-top: -190px; */
     margin-inline: 12%;
-    border: 5px solid;
+    border: 2px solid;
     border-color: #ced4de;
     width: auto;
     height: auto;
-    margin-right: 600px;
-    padding-inline: 20px;
+    margin-right: 32%;
+    padding-inline: 1%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+    animation: slideInFromBottom 1s forwards;
+    flex: 1;
+    margin-top: -190px;
+    
 }
+
+
 
 .document h2 {
     font-size: 34px;
@@ -155,8 +230,30 @@ a {
     text-align: justify;
 }
 
+.essay {
+    position: relative;
+    pointer-events: none;
+    margin-inline: 12%;
+    border: 2px solid;
+    border-color: #ced4de;
+    width: auto;
+    height: auto;
+    margin-right: 32%;
+    padding-inline: 1%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+    animation: slideInFromBottom 1s forwards;
+    margin-top: -11.5%;
+}
+
+.essay h3{
+    font-size: 28px;
+    
+}
+
 h1 {
     font-size: 48px;
+    transition: all 300ms ease-in-out;
 }
 
 h2 {
@@ -176,12 +273,13 @@ article {
     position: relative;
     margin-top: 50px;
     margin-inline: 12%;
-    border: 5px solid;
+    border: 2px solid;
     border-color: #ced4de;
     width: auto;
     height: auto;
     margin-right: 600px;
-
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
 }
 
 article h1 {
@@ -199,8 +297,16 @@ article footer {
     margin-bottom: 1%;
 }
 
-#profileImage {
+.profileImage {
     height: 400px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+    transition: all 300ms ease-in-out;
+}
+
+.profileImage:hover{
+    
+    transform: scale(1.01);
+    border-radius: 10px;
 }
 
 #logo {
@@ -211,12 +317,17 @@ article footer {
     margin-top: 1px;
 }
 
-#portfolioText {
+.portfolioText {
 
     font-size: 28px;
     font-weight: bold;
     width: 100%;
     text-align: center;
+    transition: all 200ms ease-in-out;
+}
+
+.portfolioText:hover{
+    font-size: 32px;
 }
 
 #profilelist {
@@ -241,11 +352,22 @@ article footer {
     display: flex;
 }
 
-#headerlistitem {
+
+
+.headerlistitem {
     margin-left: 40px;
     font-size: 20px;
     font-weight: bold;
+    transition: all 150ms ease-in-out;
 }
+
+.headerlistitem:hover {
+    
+    transform: scale(1.05);
+    border-radius: 10px;
+    
+}
+
 
 #flowdiagramimage {
     width: 100%;
@@ -301,3 +423,23 @@ article footer {
     margin-top: 20px;
     width: 100%;
 }
+
+#unity-container {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  #unity-canvas {
+    width: 100%;
+    height: auto;
+  }
+
+  .essay p{
+    word-wrap: break-word;
+  }
+
+  .main{
+    display: flex;
+  }
+  
+  
