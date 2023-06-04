@@ -22,3 +22,41 @@ window.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+
+
+// Function to toggle the sort order
+function toggleSortOrder() {
+    var articlesContainer = document.querySelector(".BlogSection");
+    var articles = Array.from(articlesContainer.querySelectorAll("article"));
+  
+    // Check the current sorting order
+    var currentOrder = articlesContainer.getAttribute("data-sort-order");
+    if (currentOrder === "ascending") {
+      articles.reverse();
+      articlesContainer.setAttribute("data-sort-order", "descending");
+      
+      var buttons = document.getElementsByClassName("sortButton");
+
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].innerHTML = '<img src="/Images/ascending.png" alt="Sort Descending">';
+        }
+    } else {
+        articles.reverse();
+      articlesContainer.setAttribute("data-sort-order", "ascending");
+      
+      var buttons = document.getElementsByClassName("sortButton");
+
+for (var i = 0; i < buttons.length; i++) {
+  buttons[i].innerHTML = '<img src="/Images/descending.png" alt="Sort Descending">';
+}
+    }
+  
+    // Reorder the articles
+    articlesContainer.innerHTML = "";
+    articles.forEach(function (article) {
+      articlesContainer.appendChild(article);
+    });
+  }
+
+

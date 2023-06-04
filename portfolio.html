@@ -41,127 +41,67 @@
             <h1>Sections</h1>
             <hr>
             <ul id="profilelist">
-                <li id="bloglistitem"><a href=""> Section 1</a></li>
-                <li id="bloglistitem"><a href=""> Section 2</a></li>
-                <li id="bloglistitem"><a href=""> Section 3</a></li>
-                <li id="bloglistitem"><a href=""> Section 4</a></li>
+                <li id="bloglistitem"><a href="#introduction"> Introduction</a></li>
+                <li id="bloglistitem"><a href="#Shooter"> 2D Shooter</a></li>
+                <li id="bloglistitem"><a href="#AsteroidClicker"> Asteroid Clicker</a></li>
+                <li id="bloglistitem"><a href="#TurnBasedRPG"> Turn Based RPG</a></li>
             </ul>
         </section>
         
-        <section class="PortfolioBody">
+        <section class="document">
             <p>
-                <div id="unity-container" class="unity-desktop">
-                    <canvas id="unity-canvas" width=1920 height=1080></canvas>
-                    <div id="unity-loading-bar">
-                      <div id="unity-logo"></div>
-                      <div id="unity-progress-bar-empty">
-                        <div id="unity-progress-bar-full"></div>
-                      </div>
-                    </div>
-                    <div id="unity-warning"> </div>
-                    <div id="unity-footer">
-                      <div id="unity-webgl-logo"></div>
-                      <div id="unity-fullscreen-button"></div>
-                      <div id="unity-build-title">WSOA3003A_2465008_Nicholas Isherwood_Assignment3_Build</div>
-                    </div>
-                  </div>
+                <h2 id="introduction">Introduction</h2>
+                <p>Welcome to my portfolio! While this website primarily showcases my work in Interactive Media, I have chosen to devote this space to highlight my work in my other major Game Design. Within this portfolio, you will find a collection of projects I have worked on during the semester.
+
+                    Here I present three distinct games that I have crafted with great enthusiasm and dedication. The first is a thrilling 2D shooter, designed to immerse players in an action-packed experience filled with intense battles and strategic manoeuvres. Next, an addictive clicker game, where every click counts and unlocks new levels of progression. Finally, I showcase a turn-based RPG, inviting players to embark on a short journey through an apocalyptic wasteland.
+                    
+                    Through my portfolio, I aim to demonstrate my expertise in game design, showcasing my ability to create engaging gameplay mechanics, captivating narratives, and visually stunning experiences. I invite you to delve into each project and witness the culmination of my creative vision and technical skills.
+                    </p>
+                
+                <h2 id="Shooter">2D Shooter</h2>
+                <p>This game is top-down shooter with progressive difficulty, diverse weaponry, and strategic gameplay elements. Inspired by influential games like "Enter the Gungeon" and "Nuclear Throne," players will navigate levels, shooting enemies and collecting dropped weapons. The game features a variety of weapons with unique characteristics, ammo pickups to replenish ammunition and bandages for health restoration. Each level introduces new enemy types, challenging players as they progress. </p>
+                <div>
+                  <iframe src="2DShooter/index.html" class="game"></iframe>
+                  <p>I recommend to play the game in fullscreen to ensure it works as intended.</p>
+                </div>
+
+                <div class="portfolioText">
+                    <a href="/Documents/WSOA3003A_2465008_Nicholas Isherwood_Assignment3_DesignDoc.pdf">Click here for more information</a>
+                </div>
+
+                <h2 id="AsteroidClicker">Asteroid Clicker</h2>
+                <p>My Asteroid Clicker game is an addictive and engaging idle game that challenges players to mine asteroids and accumulate valuable resources. In my clicker game, players start with a basic mining setup and must click on asteroids to earn minerals. As they progress, they can purchase mining operations and upgrades to automate the mining process, increasing efficiency and mineral gain. With each new contract achieved by accumulating a large amount of minerals, players unlock new goals and bonuses. Balancing progression and challenge, my clicker game offers a compelling gameplay loop, capturing the addictive nature of clicker games while delivering a unique and exciting experience in the world of asteroid mining.</p>
+                <div>
+                    <iframe src="AsteroidClicker/index.html" class="game"></iframe>
+                    <p>I recommend to play the game in fullscreen to ensure it works as intended.</p>
+                </div>   
+                
+                <div class="portfolioText">
+                    <a href="/Documents/WSOA3003A_2465008_Nicholas Isherwood_Assignment2_DesignDocument.pdf">Click here for more information</a>
+                </div>
+
+                <h2 id="TurnBasedRPG">Turn Based RPG</h2>
+                <p>In this 2D turn-based RPG set in a post-apocalyptic world devastated by nuclear war, you take on the role of a lone survivor. Waking up in a building after seeking shelter, you encounter a mutant and engage in a fight. As you explore the wasteland, you meet a scientist who needs your help to collect a rare ingredient for a radiation sickness cure. Embark on a dangerous mission, battling mutated creatures and raiders along the way. Through meaningful interactions with characters and decision-making, shape the narrative and your character's development. Collect better equipment, explore a small open world map, and face any challenges that come your way. Will you bring hope back to humanity or choose a different path?</p>
+                <div>
+                    <iframe src="TurnBasedRPG/index.html" class="game"></iframe>
+                    <p>I recommend to play the game in fullscreen to ensure it works as intended.</p>
+                </div>    
+
+                <div class="portfolioText">
+                    <a href="/Documents/WSOA3003A_2465008_Nicholas Isherwood_Assignment1_DesignDocument.pdf">Click here for more information</a>
+                </div>
+
+
+
             </p>
         </section>
-        <br><br><br>
+       
 
     </main>
     <script src="index.js"></script>
-    <script>
-        var container = document.querySelector("#unity-container");
-        var canvas = document.querySelector("#unity-canvas");
-        var loadingBar = document.querySelector("#unity-loading-bar");
-        var progressBarFull = document.querySelector("#unity-progress-bar-full");
-        var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-        var warningBanner = document.querySelector("#unity-warning");
-  
-        // Shows a temporary message banner/ribbon for a few seconds, or
-        // a permanent error message on top of the canvas if type=='error'.
-        // If type=='warning', a yellow highlight color is used.
-        // Modify or remove this function to customize the visually presented
-        // way that non-critical warnings and error messages are presented to the
-        // user.
-        function unityShowBanner(msg, type) {
-          function updateBannerVisibility() {
-            warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
-          }
-          var div = document.createElement('div');
-          div.innerHTML = msg;
-          warningBanner.appendChild(div);
-          if (type == 'error') div.style = 'background: red; padding: 10px;';
-          else {
-            if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-            setTimeout(function() {
-              warningBanner.removeChild(div);
-              updateBannerVisibility();
-            }, 5000);
-          }
-          updateBannerVisibility();
-        }
-  
-        var buildUrl = "Build";
-        var loaderUrl = buildUrl + "/Webgames.loader.js";
-        var config = {
-          dataUrl: buildUrl + "/Webgames.data",
-          frameworkUrl: buildUrl + "/Webgames.framework.js",
-          codeUrl: buildUrl + "/Webgames.wasm",
-          streamingAssetsUrl: "StreamingAssets",
-          companyName: "DefaultCompany",
-          productName: "WSOA3003A_2465008_Nicholas Isherwood_Assignment3_Build",
-          productVersion: "1.0",
-          showBanner: unityShowBanner,
-        };
-  
-        // By default Unity keeps WebGL canvas render target size matched with
-        // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-        // Set this to false if you want to decouple this synchronization from
-        // happening inside the engine, and you would instead like to size up
-        // the canvas DOM size and WebGL render target sizes yourself.
-        // config.matchWebGLToCanvasSize = false;
-  
-        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-          // Mobile device style: fill the whole browser client area with the game canvas:
-  
-          var meta = document.createElement('meta');
-          meta.name = 'viewport';
-          meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-          document.getElementsByTagName('head')[0].appendChild(meta);
-          container.className = "unity-mobile";
-          canvas.className = "unity-mobile";
-  
-          // To lower canvas resolution on mobile devices to gain some
-          // performance, uncomment the following line:
-          // config.devicePixelRatio = 1;
-  
-          unityShowBanner('WebGL builds are not supported on mobile devices.');
-        } else {
-          // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-  
-          
-        }
-  
-        loadingBar.style.display = "block";
-  
-        var script = document.createElement("script");
-        script.src = loaderUrl;
-        script.onload = () => {
-          createUnityInstance(canvas, config, (progress) => {
-            progressBarFull.style.width = 100 * progress + "%";
-          }).then((unityInstance) => {
-            loadingBar.style.display = "none";
-            fullscreenButton.onclick = () => {
-              unityInstance.SetFullscreen(1);
-            };
-          }).catch((message) => {
-            alert(message);
-          });
-        };
-        document.body.appendChild(script);
-      </script>
+    <script src="2DShooter/2DShooter.loader.js"></script>
+    <script src="AsteroidClicker/AsteroidClicker.loader.js"></script>
+    <script src="TurnBasedRPG/TurnBasedRPG.loader.js"></script>
 </body>
 
 </html>
