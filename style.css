@@ -203,8 +203,6 @@ a {
 
 .document {
     position: relative;
-    
-   /* margin-top: -190px; */
     margin-inline: 12%;
     border: 2px solid;
     border-color: #ced4de;
@@ -215,8 +213,8 @@ a {
     background-color: rgb(255, 255, 255);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
     animation: slideInFromBottom 1s forwards;
-    flex: 1;
-    margin-top: -190px;
+    
+    margin-top: -11.5%;
     
 }
 
