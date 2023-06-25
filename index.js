@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 
 function toggleSortOrder() {
-  var articlesContainer = document.querySelector(".BlogSection");
+  var articlesContainer = document.querySelector(".blogSection");
   var articles = Array.from(articlesContainer.querySelectorAll("article"));
   var currentOrder = articlesContainer.getAttribute("data-sort-order");
   if (currentOrder === "ascending") {
