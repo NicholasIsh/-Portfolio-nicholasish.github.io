@@ -14,37 +14,49 @@
     <title>Home Page</title>
 </head>
 
-<body>
+<body class="container">
     <header>
-        <div class="Logo">
-            <a href="index.html">
-                <img src="/Images/Logo.png" alt="Logo" id="logo">
-            </a>
-        </div>
+        <section class="logo">
+            <img src="/Images/Logo.png" alt="Logo" id="image" onclick="openPage('index.html')">
+        </section>
         <nav class="headerNavigation">
             <ul id="headerlist">
-                <li class="headerlistitem"><a href="index.html">Home</a></li>
-                <li class="headerlistitem"><a href="blog.html">Blog</a></li>
-                <li class="headerlistitem"><a href="design.html">Design</a></li>
-                <li class="headerlistitem"><a href="essay.html">Essay</a></li>
-                <li class="headerlistitem"><a href="profile.html">Profile</a></li>
+                <li class="headerlistitem" onclick="openPage('index.html')">Home</li>
+                <li class="headerlistitem" onclick="openPage('blog.html')">Blog</li>
+                <li class="headerlistitem" onclick="openPage('design.html')">Design</li>
+                <li class="headerlistitem" onclick="openPage('essay.html')">Essay</li>
+                <li class="headerlistitem" onclick="openPage('profile.html')">Profile</li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="HomeTitleText">
-            <a href="profile.html">
-            <h1>Hello, I am Nicholas Isherwood</h1>
-            </a>
+        <section class="homeTitleText">
+            <h1 class="homeH1" onclick="openPage('profile.html')">Hello, I am Nicholas Isherwood</h1>
             <h2>Welcome to my portfolio website!</h2>
         </section>
-
-        <section class="HomeText">
+        <section class="homeText">
             <p>I am a third year student at the University of the Witwaterstrand studying Digital Arts. 
                 I am majoring in Game Design and Interactive Media and wish to one day work in these respective industries. </p>
         </section>
     </main>
-    
+    <footer class="pageFooter">
+        <section class="footerInfo">
+            <section class="university" onclick="openPage('https://www.wits.ac.za')">University of Witwatersrand.</section>
+            <section class="adress">
+                <span class="city">Johannesburg</span>,
+                <span class="province">Gauteng</span>,
+                <span class="country">South Africa</span>
+            </section>
+        </section>
+        <section class="logoFooter">
+            <img src="/Images/Logo.png" alt="Logo" id="image" onclick="openPage('index.html')">
+        </section>
+        <section class="footerInfo">
+            <span class="name" onclick="openPage('profile.html')">Nicholas Isherwood</span>
+            <span class="email" onclick="openPage('mailto:2465008@students.wits.ac.za')">2465008@students.wits.ac.za</span>
+            <section class="phoneNumber">Cell: 074-866-2241</section>
+        </section>
+    </footer>
 <script src="index.js"></script>
 </body>
 </html>

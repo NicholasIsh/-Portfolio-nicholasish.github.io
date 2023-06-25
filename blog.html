@@ -16,23 +16,21 @@
 
 <body>
     <header>
-        <div class="Logo">
-            <a href="index.html">
-                <img src="/Images/Logo.png" alt="Logo" id="logo">
-            </a>
+        <div class="logo">
+            <img src="/Images/Logo.png" alt="Logo" id="image" onclick="openPage('index.html')">
         </div>
         <nav class="headerNavigation">
             <ul id="headerlist">
-                <li class="headerlistitem"><a href="index.html">Home</a></li>
-                <li class="headerlistitem"><a href="blog.html">Blog</a></li>
-                <li class="headerlistitem"><a href="design.html">Design</a></li>
-                <li class="headerlistitem"><a href="essay.html">Essay</a></li>
-                <li class="headerlistitem"><a href="profile.html">Profile</a></li>
+                <li class="headerlistitem" onclick="openPage('index.html')">Home</li>
+                <li class="headerlistitem" onclick="openPage('blog.html')">Blog</li>
+                <li class="headerlistitem" onclick="openPage('design.html')">Design</li>
+                <li class="headerlistitem" onclick="openPage('essay.html')">Essay</li>
+                <li class="headerlistitem" onclick="openPage('profile.html')">Profile</li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="BlogTitle">
+        <section class="blogTitle">
             <h1>Weekly Blog</h1>
         </section>
         <button class="sortButton" onclick="toggleSortOrder()">
@@ -45,22 +43,22 @@
             <hr>
             
             <ul id="profilelist">
-                <li id="bloglistitem"><a href="#Week1"> Week 1</a></li>
-                <li id="bloglistitem"><a href="#Week2"> Week 2</a></li>
-                <li id="bloglistitem"><a href="#Week3"> Week 3</a></li>
-                <li id="bloglistitem"><a href="#Week4"> Week 4</a></li>
-                <li id="bloglistitem"><a href="#Week7"> Week 7</a></li>
-                <li id="bloglistitem"><a href="#Week8"> Week 8</a></li>
-                <li id="bloglistitem"><a href="#Week9"> Week 9</a></li>
-                <li id="bloglistitem"><a href="#Week10"> Week 10</a></li>
-                <li id="bloglistitem"><a href="#Week11"> Week 11</a></li>
-                <li id="bloglistitem"><a href="#Week12"> Week 12</a></li>
-                <li id="bloglistitem"><a href="#Week13"> Week 13</a></li>
+                <li id="bloglistitem"><a href="#week1"> Week 1</a></li>
+                <li id="bloglistitem"><a href="#week2"> Week 2</a></li>
+                <li id="bloglistitem"><a href="#week3"> Week 3</a></li>
+                <li id="bloglistitem"><a href="#week4"> Week 4</a></li>
+                <li id="bloglistitem"><a href="#week7"> Week 7</a></li>
+                <li id="bloglistitem"><a href="#week8"> Week 8</a></li>
+                <li id="bloglistitem"><a href="#week9"> Week 9</a></li>
+                <li id="bloglistitem"><a href="#week10"> Week 10</a></li>
+                <li id="bloglistitem"><a href="#week11"> Week 11</a></li>
+                <li id="bloglistitem"><a href="#week12"> Week 12</a></li>
+                <li id="bloglistitem"><a href="#week13"> Week 13</a></li>
             </ul>
         </section>
         
-        <section class="BlogSection">
-            <article id="Week1">
+        <section class="blogSection">
+            <article id="week1">
                 <h1>Week 1</h1>
                 <p> Setting up Git: <br>
                     I already had Git installed and set up on my computer from last year as I used it in
@@ -86,7 +84,7 @@
                 </p>
                 <footer>Posted on February 28, 2023</footer>
             </article>
-            <article id="Week2">
+            <article id="week2">
                 <h1>Week 2</h1>
                 <p> My experience starting with HTML: <br>
                     I was very excited to begin learning HTML as not only will it expand my knowledge of coding languages but it
@@ -117,7 +115,7 @@
                 </p>
                 <footer>Posted on March 7, 2023</footer>
             </article>
-            <article id="Week3">
+            <article id="week3">
                 <h1>Week 3</h1>
                 <p>My experience learning CSS and continuing the development of your website: <br>
                     This week we started to learn CSS and how it works with HTML inorder to give a website some more style and personality.
@@ -147,7 +145,7 @@
                     </p>
                 <footer>Posted on March 14, 2023</footer>
             </article>
-            <article id="Week4">
+            <article id="week4">
                 <h1>Week 4</h1>
                 <p>My Experience continuing the development of my website:<br>
                     As I have been building my website's blog page I have encountered both success and challenges. While I have put in a lot of effort to create an engaging 
@@ -175,7 +173,7 @@
                     </p>
                 <footer>Posted on March 20, 2023</footer>
             </article>
-            <article id="Week7">
+            <article id="week7">
                 <h1>Week 7</h1>
 
                 <p>
@@ -202,7 +200,7 @@
                 
                 <footer>Posted on April 7, 2023</footer>
             </article>
-            <article id="Week8">
+            <article id="week8">
                 <h1>Week 8</h1>
 
                 <p>
@@ -234,7 +232,7 @@
                 
                 <footer>Posted on April 21, 2023</footer>
             </article>
-            <article id="Week9">
+            <article id="week9">
                 <h1>Week 9</h1>
                 <p>
                     Reflection on the reading 'Digital inequalities in the age of artificial intelligence and big data' by Lutz(2019): <br>
@@ -248,7 +246,7 @@
                 </p>
                 <footer>Posted on April 30, 2023</footer>
             </article>
-            <article id="Week10">
+            <article id="week10">
                 <h1>Week 10</h1>
                 <p>
                     My experience continuing the development of my website: <br>
@@ -263,7 +261,7 @@
                 </p>
                 <footer>Posted on May 5, 2023</footer>
             </article>
-            <article id="Week11">
+            <article id="week11">
                 <h1>Week 11</h1>
                 <p>
                     Continue writing about your development process: <br>
@@ -275,7 +273,7 @@
                 </p>
                 <footer>Posted on May 12, 2023</footer>
             </article>
-            <article id="Week12">
+            <article id="week12">
                 <h1>Week 12</h1>
                 <p>
                     Continue writing about your development process: <br>
@@ -295,7 +293,7 @@
                 </p>
                 <footer>Posted on May 23, 2023</footer>
             </article>
-            <article id="Week13">
+            <article id="week13">
                 <h1>Week 13</h1>
                 <p>
                     Continue writing about your development process: <br>
@@ -319,6 +317,25 @@
         </section>
         <br><br><br>
     </main>
+    <footer class="pageFooter">
+        <section class="footerInfo">
+            <section class="university" onclick="openPage('https://www.wits.ac.za')">University of Witwatersrand.</section>
+            <section class="adress">
+                <span class="city">Johannesburg</span>,
+                <span class="province">Gauteng</span>,
+                <span class="country">South Africa</span>
+            </section>
+        </section>
+        <section class="logoFooter">
+            <img src="/Images/Logo.png" alt="Logo" id="image" onclick="openPage('index.html')">
+        </section>
+        
+        <section class="footerInfo">
+            <span class="name" onclick="openPage('profile.html')">Nicholas Isherwood</span>
+            <span class="email" onclick="openPage('mailto:2465008@students.wits.ac.za')">2465008@students.wits.ac.za</span>
+            <section class="phoneNumber">Cell: 074-866-2241</section>
+        </section>
+    </footer>
     <script src="index.js"></script>
 </body>
 </html>

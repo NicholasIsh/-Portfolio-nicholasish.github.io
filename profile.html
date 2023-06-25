@@ -14,59 +14,58 @@
     <title>Profile Page</title>
 </head>
 
-<body>
+<body class="container">
     <header>
-        <div class="Logo">
-            <a href="index.html">
-                <img src="/Images/Logo.png" alt="Logo" id="logo">
-            </a>
+        <div class="logo">
+            <img src="/Images/Logo.png" alt="Logo" id="image" onclick="openPage('index.html')">
         </div>
         <nav class="headerNavigation">
             <ul id="headerlist">
-                <li class="headerlistitem"><a href="index.html">Home</a></li>
-                <li class="headerlistitem"><a href="blog.html">Blog</a></li>
-                <li class="headerlistitem"><a href="design.html">Design</a></li>
-                <li class="headerlistitem"><a href="essay.html">Essay</a></li>
-                <li class="headerlistitem"><a href="profile.html">Profile</a></li>
+                <li class="headerlistitem" onclick="openPage('index.html')">Home</li>
+                <li class="headerlistitem" onclick="openPage('blog.html')">Blog</li>
+                <li class="headerlistitem" onclick="openPage('design.html')">Design</li>
+                <li class="headerlistitem" onclick="openPage('essay.html')">Essay</li>
+                <li class="headerlistitem" onclick="openPage('profile.html')">Profile</li>
             </ul>
         </nav>
     </header>
     <main>
-        
-        <section class="ProfileImageandInfo">
-            <img src="/Images/ProfilePicture.png" alt="Profile Picture" class="profileImage">
-            <hr>
-            <section>
-                <h3>Occupation:</h3>
-                <ul id="profilelist">
-                    <li id="profilelistitem">Student at the University of the Witwatersrand</li>
-                </ul>
-                <h3>Majors:</h3>
-                <ul id="profilelist">
-                    <li id="profilelistitem">Game Design</li>
-                    <li id="profilelistitem">Interactive Media</li>
-                </ul>
-            </section>
-            <hr>
-            <section>
-                <h3>Skills:</h3>
-                <ul id="profilelist">
-                    <li id="profilelistitem">Java</li>
-                    <li id="profilelistitem">SQL</li>
-                    <li id="profilelistitem">C#</li>
-                    <li id="profilelistitem">learning HTML</li>
-                    <li id="profilelistitem">learning CSS</li>
-                    <li id="profilelistitem">learning Javascript</li>
-                </ul>
-                <h3>Interests:</h3>
-                <ul id="profilelist">
-                    <li id="profilelistitem">History</li>
-                    <li id="profilelistitem">Philosophy</li>
-                    <li id="profilelistitem">Gaming</li>
-                </ul>
+        <section class="profileContainer">
+            <section class="profileImageandInfo">
+                <img src="/Images/ProfilePicture.png" alt="Profile Picture" class="profileImage">
+                <hr>
+                <section>
+                    <h3>Occupation:</h3>
+                    <ul id="profilelist">
+                        <li id="profilelistitem">Student at the University of the Witwatersrand</li>
+                    </ul>
+                    <h3>Majors:</h3>
+                    <ul id="profilelist">
+                        <li id="profilelistitem">Game Design</li>
+                        <li id="profilelistitem">Interactive Media</li>
+                    </ul>
+                </section>
+                <hr>
+                <section>
+                    <h3>Skills:</h3>
+                    <ul id="profilelist">
+                        <li id="profilelistitem">Java</li>
+                        <li id="profilelistitem">SQL</li>
+                        <li id="profilelistitem">C#</li>
+                        <li id="profilelistitem">learning HTML</li>
+                        <li id="profilelistitem">learning CSS</li>
+                        <li id="profilelistitem">learning Javascript</li>
+                    </ul>
+                    <h3>Interests:</h3>
+                    <ul id="profilelist">
+                        <li id="profilelistitem">History</li>
+                        <li id="profilelistitem">Philosophy</li>
+                        <li id="profilelistitem">Gaming</li>
+                    </ul>
+                </section>
             </section>
         </section>
-        <section class="ProfileDescription">
+        <section class="profileDescription">
             <h1>Nicholas Isherwood</h1>
             <h2 id="ph2">Digital Arts Student</h2>
             <p id>I'm currently studying digital arts at the University of the Witwatersrand. My major is game design and interactive media, and I'm really excited about pursuing a career in design, with a focus on game and web design. <br><br>
@@ -74,12 +73,30 @@
                 I'm someone who is driven by a desire to create engaging, dynamic digital experiences that inspire and delight users. I'm always eager to learn more and to expand my skillset, and I'm excited about the possibilities that lie ahead in my design career.
             </p>
             <hr>
-            <br>
             <section class="portfolioText">
                 <a href="portfolio.html">Click here to view my portfolio</a>
             </section>
         </section>
         
     </main>
+    <footer class="pageFooter">
+        <section class="footerInfo">
+            <section class="university" onclick="openPage('https://www.wits.ac.za')">University of Witwatersrand.</section>
+            <section class="adress">
+                <span class="city">Johannesburg</span>,
+                <span class="province">Gauteng</span>,
+                <span class="country">South Africa</span>
+            </section>
+        </section>
+        <section class="logoFooter">
+            <img src="/Images/Logo.png" alt="Logo" id="image" onclick="openPage('index.html')">
+        </section>
+        <section class="footerInfo">
+            <span class="name" onclick="openPage('profile.html')">Nicholas Isherwood</span>
+            <span class="email" onclick="openPage('mailto:2465008@students.wits.ac.za')">2465008@students.wits.ac.za</span>
+            <section class="phoneNumber">Cell: 074-866-2241</section>
+        </section>
+    </footer>
+    <script src="index.js"></script>
 </body>
 </html>
